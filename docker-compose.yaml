@@ -21,8 +21,6 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     restart: unless-stopped
-
-
   pgadmin:
     container_name: pgadmin4_container
     image: dpage/pgadmin4:7
