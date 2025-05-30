@@ -27,7 +27,7 @@ public class User {
     int age;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "c_passport_id")
+    @JoinColumn(name = "c_passport_id", referencedColumnName = "id")
     private Passport passport;
 
     @ManyToMany
@@ -37,7 +37,6 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "c_hobby_id")
     )
     Set<Hobby> hobbies;
-
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     List<Account> accounts;
 }
