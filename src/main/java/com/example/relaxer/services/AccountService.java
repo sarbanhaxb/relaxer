@@ -9,5 +9,5 @@ public interface AccountService {
     AccountDTO update(Long id, AccountDTO accountDTO);
     List<AccountDTO> getAll();
     AccountDTO findById(Long id);
-    void delete(Long id);
+    void deleteById(Long id);
 }

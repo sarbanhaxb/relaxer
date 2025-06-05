@@ -33,7 +33,7 @@ public class HobbyServiceImpl implements HobbyService {
     }
 
     @Override
-    public void delete(Long id) {
+    public void deleteById(Long id) {
         hobbyRepository.deleteById(id);
     }
 
