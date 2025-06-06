@@ -7,7 +7,6 @@ import jakarta.persistence.Table;
 import lombok.*;
 
 @Data
-@RequiredArgsConstructor
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
