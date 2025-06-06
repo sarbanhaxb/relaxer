@@ -1,7 +1,6 @@
 package com.example.relaxer.services;
 
 import com.example.relaxer.DTO.HobbyDTO;
-import com.example.relaxer.entity.Hobby;
 
 import java.util.List;
 

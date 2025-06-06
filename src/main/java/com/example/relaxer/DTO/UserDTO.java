@@ -1,7 +1,5 @@
 package com.example.relaxer.DTO;
 
-import com.example.relaxer.entity.Account;
-import com.example.relaxer.entity.Hobby;
 import com.example.relaxer.entity.Passport;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

@@ -1,7 +1,6 @@
 package com.example.relaxer.services;
 
 import com.example.relaxer.DTO.UserDTO;
-import com.example.relaxer.entity.User;
 
 import java.util.List;
 

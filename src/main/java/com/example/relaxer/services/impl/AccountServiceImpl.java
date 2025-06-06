@@ -2,9 +2,7 @@ package com.example.relaxer.services.impl;
 
 import com.example.relaxer.DTO.AccountDTO;
 import com.example.relaxer.entity.Account;
-import com.example.relaxer.entity.User;
 import com.example.relaxer.repositories.AccountRepository;
-import com.example.relaxer.repositories.UserRepository;
 import com.example.relaxer.services.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

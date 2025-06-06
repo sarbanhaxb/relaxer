@@ -1,6 +1,5 @@
 package com.example.relaxer.services.impl;
 
-import com.example.relaxer.DTO.HobbyDTO;
 import com.example.relaxer.DTO.UserDTO;
 import com.example.relaxer.entity.Hobby;
 import com.example.relaxer.entity.User;
@@ -8,7 +7,6 @@ import com.example.relaxer.mapper.UserMapper;
 import com.example.relaxer.repositories.HobbyRepository;
 import com.example.relaxer.repositories.UserRepository;
 import com.example.relaxer.services.UserService;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
