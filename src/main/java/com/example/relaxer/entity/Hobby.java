@@ -13,7 +13,7 @@ import java.util.Set;
 @Table(schema = "users_schema", name = "t_hobbies")
 public class Hobby {
     @Id
-    long id;
+    Long id;
 
     @Column(name = "c_type")
     String type;
