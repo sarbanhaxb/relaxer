@@ -4,6 +4,7 @@ import com.example.relaxer.DTO.AccountDTO;
 import com.example.relaxer.entity.Account;
 import com.example.relaxer.repositories.AccountRepository;
 import com.example.relaxer.services.AccountService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import java.util.NoSuchElementException;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class AccountServiceImpl implements AccountService {
     private final AccountRepository accountRepository;
 

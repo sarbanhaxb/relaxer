@@ -4,6 +4,7 @@ import com.example.relaxer.DTO.PassportDTO;
 import com.example.relaxer.entity.Passport;
 import com.example.relaxer.repositories.PassportRepository;
 import com.example.relaxer.services.PassportService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import java.util.NoSuchElementException;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class PassportServiceImpl implements PassportService {
     private final PassportRepository passportRepository;
 

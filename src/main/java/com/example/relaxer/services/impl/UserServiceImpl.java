@@ -7,6 +7,7 @@ import com.example.relaxer.mapper.UserMapper;
 import com.example.relaxer.repositories.HobbyRepository;
 import com.example.relaxer.repositories.UserRepository;
 import com.example.relaxer.services.UserService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class UserServiceImpl implements UserService {
     private final HobbyRepository hobbyRepository;
     private final UserRepository userRepository;

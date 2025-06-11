@@ -19,14 +19,14 @@ public class HobbyController {
     private final HobbyService hobbyService;
 
 
-    @Operation(summary = "Find hobbies", tags = {"Hobbies"}, description = "Find all hobbies", responses = {
+    @Operation(summary = "Find hobbies", description = "Find all hobbies", responses = {
             @ApiResponse(responseCode = "200", description = "Hobbies found successfully")})
     @GetMapping
     public ResponseEntity<List<HobbyDTO>> getHobbies(){
         return ResponseEntity.ok().body(hobbyService.getAll());
     }
 
-    @Operation(summary = "Find hobby by id", tags = {"Hobbies"}, description = "Find hobby by id", responses = {
+    @Operation(summary = "Find hobby by id", description = "Find hobby by id", responses = {
             @ApiResponse(responseCode = "200", description = "Hobby found successfully"),
             @ApiResponse(responseCode = "404", description = "Hobby not found")
     })
@@ -35,7 +35,7 @@ public class HobbyController {
         return ResponseEntity.ok().body(hobbyService.findById(id));
     }
 
-    @Operation(summary = "Create hobby", tags = {"Hobbies"}, description = "Create hobby", responses = {
+    @Operation(summary = "Create hobby", description = "Create hobby", responses = {
             @ApiResponse(responseCode = "200", description = "Hobby was create successfully"),
             @ApiResponse(responseCode = "400", description = "Bad request")
     })
@@ -44,7 +44,7 @@ public class HobbyController {
         return ResponseEntity.ok().body(hobbyService.create(hobbyDTO));
     }
 
-    @Operation(summary = "Update hobby", tags = {"Hobbies"}, description = "Update hobby", responses = {
+    @Operation(summary = "Update hobby", description = "Update hobby", responses = {
             @ApiResponse(responseCode = "200", description = "Hobby was update successfully"),
             @ApiResponse(responseCode = "404", description = "Hobby was not found")
     })
@@ -53,7 +53,7 @@ public class HobbyController {
         return ResponseEntity.ok().body(hobbyService.update(id, hobbyDTO));
     }
 
-    @Operation(summary = "Delete hobby by id", tags = {"Hobbies"}, description = "Delete hobby", responses = {
+    @Operation(summary = "Delete hobby by id", description = "Delete hobby", responses = {
             @ApiResponse(responseCode = "200", description = "Hobby was delete successfully"),
             @ApiResponse(responseCode = "404", description = "Hobby not found")
     })
