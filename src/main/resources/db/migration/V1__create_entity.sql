@@ -1,11 +1,11 @@
 CREATE SCHEMA IF NOT EXISTS users_schema;
 
-CREATE TABLE IF NOT EXISTS t_passports(
+CREATE TABLE IF NOT EXISTS users_schema.t_passports(
     id INTEGER PRIMARY KEY NOT NULL,
     c_number VARCHAR(12) NOT NULL UNIQUE
 );
 
-CREATE TABLE IF NOT EXISTS t_users(
+CREATE TABLE IF NOT EXISTS users_schema.t_users(
     id INTEGER PRIMARY KEY NOT NULL,
     c_name VARCHAR(50) NOT NULL,
     c_age INTEGER  NOT NULL CHECK(c_age > 15 AND c_age < 86),
@@ -13,19 +13,19 @@ CREATE TABLE IF NOT EXISTS t_users(
     FOREIGN KEY (c_passport_id) REFERENCES t_passports(id)
 );
 
-CREATE TABLE IF NOT EXISTS t_accounts(
+CREATE TABLE IF NOT EXISTS users_schema.t_accounts(
     id INTEGER PRIMARY KEY NOT NULL,
     title VARCHAR(50) NOT NULL,
     c_user_id INTEGER,
     FOREIGN KEY (c_user_id) REFERENCES t_users(id)
 );
 
-CREATE TABLE IF NOT EXISTS t_hobbies(
+CREATE TABLE IF NOT EXISTS users_schema.t_hobbies(
     id INTEGER PRIMARY KEY NOT NULL,
     c_type VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_users_hobbies(
+CREATE TABLE IF NOT EXISTS users_schema.t_users_hobbies(
     c_user_id INTEGER,
     c_hobby_id INTEGER,
     PRIMARY KEY(c_user_id, c_hobby_id),
