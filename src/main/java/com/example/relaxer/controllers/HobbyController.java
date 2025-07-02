@@ -22,7 +22,7 @@ public class HobbyController {
     @Operation(summary = "Find hobbies", description = "Find all hobbies", responses = {
             @ApiResponse(responseCode = "200", description = "Hobbies found successfully")})
     @GetMapping
-    public ResponseEntity<List<HobbyDTO>> getHobbies(){
+    public ResponseEntity<List<HobbyDTO>> getHobbies() {
         return ResponseEntity.ok().body(hobbyService.getAll());
     }
 
@@ -31,7 +31,7 @@ public class HobbyController {
             @ApiResponse(responseCode = "404", description = "Hobby not found")
     })
     @GetMapping("/{id}")
-    public ResponseEntity<HobbyDTO> getHobbyById(@PathVariable Long id){
+    public ResponseEntity<HobbyDTO> getHobbyById(@PathVariable Long id) {
         return ResponseEntity.ok().body(hobbyService.findById(id));
     }
 
@@ -40,7 +40,7 @@ public class HobbyController {
             @ApiResponse(responseCode = "400", description = "Bad request")
     })
     @PostMapping
-    public ResponseEntity<HobbyDTO> createHobby(@RequestBody HobbyDTO hobbyDTO){
+    public ResponseEntity<HobbyDTO> createHobby(@RequestBody HobbyDTO hobbyDTO) {
         return ResponseEntity.ok().body(hobbyService.create(hobbyDTO));
     }
 
@@ -49,7 +49,7 @@ public class HobbyController {
             @ApiResponse(responseCode = "404", description = "Hobby was not found")
     })
     @PutMapping("/{id}")
-    public ResponseEntity<HobbyDTO> updateHobby(@RequestBody HobbyDTO hobbyDTO, @PathVariable Long id){
+    public ResponseEntity<HobbyDTO> updateHobby(@RequestBody HobbyDTO hobbyDTO, @PathVariable Long id) {
         return ResponseEntity.ok().body(hobbyService.update(id, hobbyDTO));
     }
 
@@ -58,7 +58,7 @@ public class HobbyController {
             @ApiResponse(responseCode = "404", description = "Hobby not found")
     })
     @DeleteMapping("/{id}")
-    public ResponseEntity<HobbyDTO> deleteHobby(@PathVariable Long id){
+    public ResponseEntity<HobbyDTO> deleteHobby(@PathVariable Long id) {
         hobbyService.deleteById(id);
         return ResponseEntity.noContent().build();
     }

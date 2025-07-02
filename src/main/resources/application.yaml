@@ -19,3 +19,6 @@ server:
 logging:
   level:
     sql: info
+
+jwt:
+  secret: 17e0710f07f2efc0d0ac915defaebc08a2aea6c1f493622c67d8ce7c42dfb5b1

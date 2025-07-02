@@ -6,8 +6,12 @@ import java.util.List;
 
 public interface HobbyService {
     HobbyDTO create(HobbyDTO hobbyDTO);
+
     HobbyDTO update(Long id, HobbyDTO hobbyDTO);
+
     void deleteById(Long id);
+
     List<HobbyDTO> getAll();
+
     HobbyDTO findById(Long id);
 }

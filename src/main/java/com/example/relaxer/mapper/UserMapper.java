@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class UserMapper {
-    public static User toEntity(UserDTO dto, List<Hobby> hobbies){
+    public static User toEntity(UserDTO dto, List<Hobby> hobbies) {
         User user = new User();
         user.setName(dto.name());
         user.setAge(dto.age());
@@ -21,7 +21,7 @@ public class UserMapper {
         passport.setNumber(dto.passport().getNumber());
         user.setPassport(passport);
 
-        if (dto.accounts() != null){
+        if (dto.accounts() != null) {
             List<Account> accountList = dto.accounts().stream().map(acc -> {
                 Account a = new Account();
                 a.setTitle(acc.title());
@@ -35,7 +35,7 @@ public class UserMapper {
         return user;
     }
 
-    public static UserDTO toDTO(User user){
+    public static UserDTO toDTO(User user) {
         List<AccountDTO> accountDTOS = user.getAccounts().stream()
                 .map(a -> new AccountDTO(a.getTitle()))
                 .toList();

@@ -32,7 +32,7 @@ public class PassportServiceImpl implements PassportService {
 
     @Override
     public PassportDTO findById(Long id) {
-        return PassportDTO.builder().number(passportRepository.findById(id).orElseThrow(()-> new NoSuchElementException("Passport not found")).getNumber()).build();
+        return PassportDTO.builder().number(passportRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Passport not found")).getNumber()).build();
     }
 
     @Override

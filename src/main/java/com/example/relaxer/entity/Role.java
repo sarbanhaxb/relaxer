@@ -1,5 +1,6 @@
 package com.example.relaxer.entity;
 
+import com.example.relaxer.entity.Credentials;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Builder
-@Table(schema = "users_schema", name = "t_credentials")
+@Table(schema = "users_schema", name = "t_roles")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
